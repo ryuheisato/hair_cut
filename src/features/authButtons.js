@@ -1,28 +1,30 @@
 import { auth, provider } from "../firebase";
 import { setUser, signOut } from "./Auth";
-import { useDispatch } from 'react-redux';
-import { signInWithPopup } from "firebase/auth"
-import { useNavigate } from "react-router-dom"
+import { useDispatch } from "react-redux";
+import { signInWithPopup } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import "./auth.css";
 
 //Sign In ボタン
 export const SignInWithGoogleButton = () => {
   const dispatch = useDispatch();
-  const navigate =useNavigate();
+  const navigate = useNavigate();
 
   const handleSignInClick = () => {
     signInWithPopup(auth, provider)
-    .then((result) => {
+      .then((result) => {
         const user = result.user;
-        dispatch(setUser(user));  //ユーザーの状態を更新
-        navigate("/home")
-    })
-    .catch((error) => {
-    console.log(error);
-    });
+        dispatch(setUser(user)); //ユーザーの状態を更新
+        navigate("/home");
+        console.log(user.uid);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
-    <button onClick={handleSignInClick}>
+    <button className="button" onClick={handleSignInClick}>
       Sign In
     </button>
   );
@@ -31,21 +33,22 @@ export const SignInWithGoogleButton = () => {
 //Sign Out　ボタン
 export const SignOutButton = () => {
   const dispatch = useDispatch();
-  const navigate =useNavigate();
+  const navigate = useNavigate();
 
   const handleSignOutClick = () => {
-    auth.signOut()
-    .then(() => {
-      dispatch(signOut());
-      navigate("/")
-    })
-    .catch((error) => {
-    console.log(error);
-    });
+    auth
+      .signOut()
+      .then(() => {
+        dispatch(signOut());
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
-    <button onClick={handleSignOutClick}>
+    <button className="button" onClick={handleSignOutClick}>
       Sign Out
     </button>
   );

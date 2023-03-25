@@ -1,28 +1,27 @@
-import { createSlice } from '@reduxjs/toolkit';
-import 'firebase/auth';
+import { createSlice } from "@reduxjs/toolkit";
+import "firebase/auth";
+//import { useEffect } from "react";
 
 //初期状態
 const initialState = {
-  user: null,
   isSignedIn: false,
+  authId: null,
 };
 
 const authSlice = createSlice({
-  name: 'auth',
+  name: "auth",
   initialState,
   reducers: {
     setUser: (state, action) => {
-      state.user = action.payload;
       state.isSignedIn = true;
+      state.authId = action.payload;
     },
     signOut: (state) => {
-      state.user = null;
       state.isSignedIn = false;
+      state.authId = null;
     },
   },
 });
 
 export const { setUser, signOut } = authSlice.actions;
 export default authSlice.reducer;
-
-//test
