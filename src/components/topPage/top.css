@@ -1,0 +1,30 @@
+.top-title {
+  margin: 85px auto;
+  width: fit-content;
+  font-family: 'Source Serif Pro', serif;
+}
+
+.top-body {
+  margin-left: auto;
+  margin-right: auto;
+  width: 47em;
+  text-align: justify;
+  line-height: 40px;
+  letter-spacing: 1px;
+  font-family: 'Source Serif Pro', serif;
+  display: flex;
+  justify-content: center;
+  color: rgba(49, 49, 49, 0.932);
+}
+
+.top-button {
+  display: block;
+  margin: 100px auto;
+  width: 200px;
+}
+
+@media (max-width: 720px) {
+  .top-body {
+    width: 20em;
+  }
+}

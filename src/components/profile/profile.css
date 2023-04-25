@@ -1,0 +1,62 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 40%;
+  margin: 30px auto;
+}
+
+@media (max-width: 720px) {
+  .profile {
+    max-width: 74%;
+  }
+}
+
+.profile-item {
+  margin: 10px;
+  font-weight: bold;
+}
+
+.edit-button {
+  margin-top: 30px;
+  font-size: 13px;
+  font-weight: 550;
+  background-color: #f3f7fe;
+  color: #3b82f6;
+  border: 1px solid #3b82f6;
+  border-radius: 8px;
+  width: 88px;
+  height: 35px;
+  transition: 0.3s;
+}
+
+.edit-button:hover {
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 3px solid #999;
+  padding: 3px;
+}
+
+.Profile-Setting-Title {
+  text-align: center;
+  font-size: 34px;
+  color: rgba(0, 0, 0, 0.788);
+}
+
+.Post-Page-Title {
+  text-align: center;
+  font-size: 34px;
+  color: rgba(0, 0, 0, 0.788);
+}

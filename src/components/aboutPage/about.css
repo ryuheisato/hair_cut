@@ -1,0 +1,24 @@
+.about-title {
+  margin: 55px auto;
+  border-bottom: 1px solid black;
+  width: fit-content;
+}
+
+.about-section {
+  margin-left: auto;
+  margin-right: auto;
+  width: 37em;
+  text-align: justify;
+  line-height: 40px;
+  letter-spacing: 1px;
+  font-family: 'Source Serif Pro', serif;
+  display: flex;
+  justify-content: center;
+  color: rgba(49, 49, 49, 0.932);
+}
+
+@media (max-width: 720px) {
+  .about-section {
+    width: 20em;
+  }
+}

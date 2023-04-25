@@ -1,0 +1,43 @@
+.logo {
+  width: 100px;
+  height: 30px;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  color: aliceblue;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 1px rgba(255, 255, 255, 0.774) solid;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+  font-family: 'Roboto', 'Lato', sans-serif, cursive;
+  font-weight: bold;
+}
+
+ul li a {
+  text-decoration: none;
+  color: rgb(68, 67, 67);
+  transition: all 0.3s;
+}
+
+ul li a:hover {
+  color: rgb(162, 171, 172);
+}
+
+@media (max-width: 720px) {
+  .header-disp {
+    display: none;
+  }
+
+  ul li {
+    font-size: 12px;
+  }
+}

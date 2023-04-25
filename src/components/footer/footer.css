@@ -1,0 +1,31 @@
+.footer {
+  margin-top: 100px;
+  background: rgb(32, 32, 32);
+  padding: 5px 0px;
+  font-family: 'Play', sans-serif;
+  text-align: center;
+}
+
+.footer .row {
+  width: 100%;
+  margin: 1% 0%;
+  padding: 0.6% 0%;
+  color: gray;
+  font-size: 0.8em;
+}
+
+.footer .row a:hover {
+  color: #fff;
+}
+
+@media (max-width: 720px) {
+  .footer {
+    text-align: left;
+    padding: 5%;
+  }
+  .footer .row ul li {
+    display: block;
+    margin: 10px 0px;
+    text-align: left;
+  }
+}
